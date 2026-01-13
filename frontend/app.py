@@ -1,8 +1,14 @@
 import streamlit as st
 import requests
+import os
 
 # BASE_URL = "http://127.0.0.1:8000/"
-BASE_URL = "http://backend:8000"
+# BASE_URL = "http://backend:8000"
+# Detectar el entorno
+if os.getenv("DOCKER_ENV"):
+    BASE_URL = "http://backend:8000"
+else:
+    BASE_URL = "http://localhost:8000"
 
 
 def main():
