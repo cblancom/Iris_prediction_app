@@ -10,5 +10,7 @@ services:
     build: ./frontend
     ports:
       - "8501:8501"
+    environment:
+      - DOCKER_ENV=true
     depends_on:
       - backend
