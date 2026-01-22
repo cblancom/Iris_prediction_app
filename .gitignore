@@ -1,2 +1,5 @@
 .venv
+database.db
 
+.env/
+.env
