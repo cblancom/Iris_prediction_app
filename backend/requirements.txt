@@ -3,4 +3,6 @@ scikit-learn>=1.8.0
 streamlit>=1.52.2
 uvicorn>=0.40.0
 sqlmodel
+pytest
+pytest-cov
 
