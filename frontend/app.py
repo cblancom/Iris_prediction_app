@@ -27,10 +27,10 @@ def main():
         "feature3": feat_3,
         "feature4": feat_4,
     }
-    response = requests.post(f"{BASE_URL}/predict/", json=data)
 
     target_names = ["Setosa", "Versicolor", "Virginica"]
     if st.button("Prediction"):
+        response = requests.post(f"{BASE_URL}/predict/", json=data)
         prediction_data = response.json()
         predicted_class = prediction_data["predicted_class"]
         st.write(f"Prediction is {target_names[predicted_class]}")
