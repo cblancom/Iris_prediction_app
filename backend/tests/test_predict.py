@@ -6,10 +6,11 @@ from sqlmodel.pool import StaticPool
 import sys
 import os
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "app"))
+# sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "app"))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from main import app
-from database.database import get_session
+from app.main import app
+from app.database.database import get_session
 
 
 @pytest.fixture(name="session")
