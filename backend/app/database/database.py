@@ -1,7 +1,7 @@
 from fastapi import Depends
 from typing import Annotated
 from sqlmodel import create_engine, SQLModel, Session
-from schemas.input_output import Prediction
+from app.schemas.input_output import Prediction
 
 sqlite_file_name = "database.db"
 sqlite_url = f"sqlite:///{sqlite_file_name}"

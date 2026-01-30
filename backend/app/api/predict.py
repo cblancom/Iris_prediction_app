@@ -1,9 +1,9 @@
 import joblib
 from pathlib import Path
 from fastapi import APIRouter
-from schemas.input_output import InputFeatures, Prediction, PredictionResponse
-from utils.loader import load_model
-from database.database import SessionDep
+from app.schemas.input_output import InputFeatures, Prediction, PredictionResponse
+from app.utils.loader import load_model
+from app.database.database import SessionDep
 import numpy as np
 from sqlmodel import select, func
 

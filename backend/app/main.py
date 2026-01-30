@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from api.predict import router
-from database.database import create_db_and_tables
+from app.api.predict import router
+from app.database.database import create_db_and_tables
 import os
 
 print("#" * 50)

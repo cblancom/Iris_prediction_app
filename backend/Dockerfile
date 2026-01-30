@@ -1,11 +1,11 @@
 FROM python:3.13-slim
 
-WORKDIR /home/proyect
+WORKDIR /app
 
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 
-COPY app .
+COPY app ./app
 
-# CMD ["fastapi", "run", "backend/app/main.py"]
-CMD ["fastapi", "run", "main.py"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
